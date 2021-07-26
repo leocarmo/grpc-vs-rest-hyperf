@@ -42,11 +42,40 @@ ghz --insecure --proto grpc.proto --call grpc.hi/sayHello --duration=10s --concu
 
 ```
 Summary:
-  Count:        211863
-  Total:        10.00 s
-  Slowest:      150.54 ms
-  Fastest:      0.41 ms
-  Average:      4.67 ms
-  Requests/sec: 21186.19
+  Count:	779850
+  Total:	30.00 s
+  Slowest:	144.59 ms
+  Fastest:	0.46 ms
+  Average:	3.80 ms
+  Requests/sec:	25995.00
+
+Response time histogram:
+  0.457 [1]	|
+  14.870 [769705]	|∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎
+  29.284 [4794]	|
+  43.698 [2394]	|
+  58.111 [1523]	|
+  72.525 [783]	|
+  86.939 [375]	|
+  101.352 [110]	|
+  115.766 [23]	|
+  130.180 [26]	|
+  144.594 [16]	|
+
+Latency distribution:
+  10 % in 2.78 ms
+  25 % in 2.96 ms
+  50 % in 3.22 ms
+  75 % in 3.55 ms
+  90 % in 4.06 ms
+  95 % in 4.71 ms
+  99 % in 23.20 ms
+
+Status code distribution:
+  [Unavailable]   100 responses
+  [OK]            779750 responses
+
+Error distribution:
+  [100]   rpc error: code = Unavailable desc = transport is closing
 ```
 
